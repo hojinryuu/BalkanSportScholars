@@ -87,7 +87,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: var(--main-bg-grey);
+    background-color: var(--main-bg-navy);
 }
 
 .container-about {
@@ -109,14 +109,14 @@
 }
 
 .about-text h1 {
-    color: var(--header-navy-color);
+    color: #fff;
     font-size: 4rem;
     line-height: 1;
     text-transform: capitalize;
 }
 
 .about-text p {
-    color: var(--header-navy-color);
+    color: #fff;
     font-size: 1.25rem;
     line-height: 1.5rem;
     margin-top: 0.75em;
@@ -162,7 +162,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: var(--main-bg-navy);
+    background-color: var(--main-bg-grey);
 }
 
 .service-wrapper {
@@ -170,7 +170,7 @@
 }
 
 .service-wrapper h1 {
-    color: #fff;
+    color: var(--header-navy-color);
     font-size: 4rem;
     text-transform: capitalize;
 }
@@ -201,7 +201,7 @@
 }
 
 .card h2 {
-    color: #fff;
+    color: var(--header-navy-color);
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -211,7 +211,7 @@
     text-align: left;
     width: 100%;
     margin: 12px 0;
-    color: #fff;
+    color: var(--header-navy-color);
 }
 
 @media screen and (max-width: 600px) {
@@ -246,7 +246,7 @@
     height: 90vh;
     display: flex;
     align-items: center;
-    background-color: var(--main-bg-grey);
+    background-color: var(--main-bg-navy);
 }
 
 .players-wrapper {
@@ -254,7 +254,7 @@
 }
 
 .players-wrapper h1 {
-    color: var(--header-navy-color);
+    color: #fff;
     font-size: 4rem;
     text-transform: capitalize;
 }
@@ -301,6 +301,61 @@
     }
 }
 
+/* contact section */
+.contact {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-grey);
+}
+
+.contact-box {
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #999;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid magenta;
+    align-items: center;
+}
+
+.input-field {
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #777;
+    border-radius: 14px;
+    outline: none;
+}
+
+.textarea-field {
+    height: 150px;
+    padding-top: 10px;
+}
+
+.submit-button {
+    background-color: var(--main-bg-red);
+    color: white;
+    display: block;
+    width: fit-content;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+/* footer section */
 footer {
     padding: 1em 0;
     background-color: #191a2b;
