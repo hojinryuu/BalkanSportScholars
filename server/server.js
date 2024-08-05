@@ -7,7 +7,6 @@ const contactRoutes = require('./routes/contacts');
 
 const app = express();
 
-// middleware
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../public')));
