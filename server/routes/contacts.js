@@ -1,31 +1,26 @@
 const express = require('express');
-const Contact = require('../models/Contact');
-const router = express.Router();
+const {
+  createContact,
+  getContacts,
+  getContact,
+  deleteContact,
+  updateContact
+} = require('../controllers/contactController')
+const router = express.Router()
 
-// Get all contact form submissions
-router.get('/', async (req, res) => {
-  try {
-    const contacts = await Contact.find();
-    res.json(contacts);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+// GET all contacts
+router.get('/', getContacts)
 
-// Create a new contact form submission
-router.post('/', async (req, res) => {
-  const contact = new Contact({
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message
-  });
+// GET a single contact
+router.get('/:id', getContact)
 
-  try {
-    const newContact = await contact.save();
-    res.status(201).json(newContact);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
-});
+// POST a new contact
+router.post('/', createContact)
 
-module.exports = router;
+// DELETE a contact
+router.delete('/:id', deleteContact)
+
+// PATCH a contact
+router.patch('/:id', updateContact)
+
+module.exports = router
