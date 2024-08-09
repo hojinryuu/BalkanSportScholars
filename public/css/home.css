@@ -294,6 +294,7 @@
     .players {
         height: auto;
     }
+
     .players-wrapper {
         text-align: center;
     }
@@ -495,6 +496,11 @@ input[type=submit]:hover {
     align-self: flex-start;
 }
 
+.contact-icons {
+    display: flex;
+    align-items: center;
+}
+
 .contact-info i {
     font-size: 1.5rem;
     -webkit-text-stroke-width: 1px;
@@ -502,6 +508,7 @@ input[type=submit]:hover {
 }
 
 .contact-info span {
+    margin: 0 0.5em;
     font-size: 1.25rem;
 }
 
@@ -514,13 +521,57 @@ input[type=submit]:hover {
 }
 
 #social-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 
+.social-logo {
+    display: flex;
+    align-items: center;
+}
+
 .social span:hover {
     cursor: pointer;
     color: #fa1e34;
+}
+
+@media (max-width: 600px) {
+    .contact {
+        height: auto;
+    }
+
+    .container-contact h1{
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .contact-temp {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        margin-top: 30px;
+        max-width: 500px;
+    }
+    
+    .contact-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info span {
+        font-size: 1rem;
+    }
+
+    .social {
+        flex-direction: column;
+    }
 }
