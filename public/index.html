@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <!-- navbar -->
@@ -116,17 +117,44 @@
 
     <!-- contact section -->
     <section class="contact">
-        <div class="contact-box">
-            <form>
-                <input type="text" class="input-field" placeholder="Your Name">
-                <input type="email" class="input-field" placeholder="Your Email">
-                <input type="text" class="input-field" placeholder="Subject">
-                <textarea type="text" class="input-field textarea-field" placeholder="Your Message"></textarea>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
+        <div class="container-contact">
+            <h1>Contact Us</h1>
+
+            <div class="contact-temp">
+                <div class="contact-form">
+                    <form>
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <textarea type="text" name="message" placeholder="Message"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h1>Contact Information</h1>
+
+                    <div class="contact-icons">
+                        <i class="material-icons">email</i>
+                        <span>balkansportscholars@gmail.com</span><br>
+                    </div>
+                    <div class="contact-icons">
+                        <i class="material-icons">phone</i>
+                        <span>+12523738698, +13472781736, +355698355522</span>
+                    </div>
+                   
+                    <div class="social">
+                        <i id="social-icon" class="fab fa-facebook"></i>
+                        <span>Balkan Sport Scholars</span>
+                        <i id="social-icon" class="fab fa-instagram"></i>
+                        <span>balkansportscholars</span>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    </section>    
-    
+    </section>
+
+   
     <!-- footer section -->
     <footer>
         <div class="footer container-footer">
