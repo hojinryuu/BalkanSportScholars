@@ -3,6 +3,7 @@
     --main-bg-grey:#cccccc;
     --main-bg-navy:#191a2b;
     --main-bg-red:#C40404;
+    --btn-hover-red:#A30303;
 }
 
 .hero {
@@ -52,6 +53,10 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1rem;
+}
+
+.hero-intro a:hover {
+    background-color: var(--btn-hover-red);
 }
 
 .hero-intro-side p {
@@ -106,6 +111,10 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1rem;
+}
+
+.container-about a:hover {
+    background-color: var(--btn-hover-red);
 }
 
 .about-text h1 {
@@ -435,14 +444,14 @@ footer {
 input[type=text], input[type=email], textarea {
     width: 100%; 
     padding: 12px;
-    border: none; /* Remove the default border */
-    border-bottom: 2px solid #ccc; /* Underline only */
+    border: none;
+    border-bottom: 2px solid #ccc;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    background-color: transparent; /* Ensures no background color */
-    transition: border-bottom-color 0.3s ease; /* Smooth transition */
+    background-color: transparent; 
+    transition: border-bottom-color 0.3s ease;
 }
 
 input[type=text]:focus, 
@@ -465,6 +474,10 @@ input[type=submit] {
     cursor: pointer;
     background-color: var(--main-bg-red);
     color: white;
+}
+
+input[type=submit]:hover {
+    background-color: var(--btn-hover-red);
 }
 
 .contact-info {
