@@ -1,0 +1,34 @@
+:root {
+    --header-navy-color: #010137;
+    --main-bg-grey: #cccccc;
+    --main-bg-navy: #191a2b;
+    --main-bg-red: #C40404;
+    --btn-hover-red: #A30303;
+}
+
+h1, h2 {
+    font-size: 26px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+}
+
+a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
