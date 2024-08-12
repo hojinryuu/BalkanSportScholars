@@ -13,7 +13,6 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // routes
 app.use('/api/contacts', contactRoutes);
-
 const dbURI ='mongodb+srv://hojinryu:LJQE7NhnY99z1JnV@primary-cluster.ty6scxp.mongodb.net/?retryWrites=true&w=majority&appName=primary-cluster';
 mongoose.connect(dbURI)
     .then(() => console.log('MongoDB Atlas connected...'))
