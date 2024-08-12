@@ -69,6 +69,15 @@ input[type=submit]:hover {
     background-color: var(--btn-hover-red);
 }
 
+div.error {
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid red;
+    color: red;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
 .contact-info {
     height: 250px;
     display: flex;

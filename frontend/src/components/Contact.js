@@ -61,8 +61,8 @@ const Contact = () => {
                                 onChange={(e) => setMessage(e.target.value)}
                             ></textarea>
                             <input type="submit" value="Submit" />
+                            {error && <div className="error">{error}</div>}
                         </form>
-                        {error && <div className="error">{error}</div>}
                     </div>
                     <div className="contact-info">
                         <h1>Contact Information</h1>

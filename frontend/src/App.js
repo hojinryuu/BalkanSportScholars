@@ -1,25 +1,27 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Service';
-import Players from './components/Players';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './styles/global.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Players />
-      <Contact />
-      <Footer />
-    </div>
-  );
+// pages & components
+import Home from './pages/Home'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
+function App () {
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Navbar />
+                <div className="page">
+                    <Routes>
+                        <Route 
+                            path="/"
+                            element={<Home />}
+                        />
+                    </Routes>
+                </div>
+                <Footer />
+            </BrowserRouter>
+        </div>
+    )
 }
 
 export default App;

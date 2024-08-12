@@ -1,6 +1,3 @@
-import React from 'react';
-import '../styles/service.css';
-
 function Services() {
   return (
     <section className="service">

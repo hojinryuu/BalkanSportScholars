@@ -1,6 +1,3 @@
-import React from 'react';
-import '../styles/players.css';
-
 function Players() {
   return (
     <section className="players">
