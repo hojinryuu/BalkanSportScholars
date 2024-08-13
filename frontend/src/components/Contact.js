@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import '../styles/contact.css';
 
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(null); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,13 +23,15 @@ const Contact = () => {
 
         if (!response.ok) {
             setError(json.error);
+            setSuccess(null); 
         }
         if (response.ok) {
             setName('');
             setEmail('');
             setMessage('');
             setError(null);
-            console.log('new form added', json);
+            setSuccess("Your message has been sent successfully!"); 
+            // console.log('new form added', json);
         }
     };
 
@@ -62,6 +64,7 @@ const Contact = () => {
                             ></textarea>
                             <input type="submit" value="Submit" />
                             {error && <div className="error">{error}</div>}
+                            {success && <div className="success">{success}</div>}
                         </form>
                     </div>
                     <div className="contact-info">
