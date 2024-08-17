@@ -29,6 +29,17 @@
     font-size: 4rem;
 }
 
+@media (max-width: 600px) {
+    .intro {
+        height: 300px;
+    }
+
+    .container-intro h1 {
+        font-size: 1.5em;
+        line-height: 1.75em;
+    }
+}
+
 /* mission section */
 .mission {
     height: 80vh;
@@ -60,4 +71,234 @@
     height: 87%;
     align-self: flex-end;
     margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .mission {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .container-mission {
+        margin: 0 auto;
+        padding: 5% 8%;
+    }
+
+    .mission-text h1{
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .mission-text p {
+        font-size: 1rem;
+    }
+    
+    .mission img {
+        height: 350px;
+    }
+}
+
+/* why-us section */
+.why-us {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-navy);
+}
+
+.container-why{
+    margin-left: 8%;
+}
+
+.container-why h1 {
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.why-text {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-text p {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.why-us img {
+    height: 55%;
+    width: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .why-us {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .container-why {
+        margin: 0 auto;
+        padding: 5% 8%;
+    }
+
+    .container-why h1{
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .why-text p {
+        font-size: 1rem;
+    }
+    
+    .why-us img {
+       height: 40%;
+       padding: 5% 5%;
+    }
+}
+
+/* meet-us section */
+.meet-us {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-grey);
+}
+
+.container-meet-us{
+    padding: 5% 8%;
+}
+
+.container-meet-us h1 {
+    color: var(--header-navy-color);
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.team-cards {
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 3em;
+}
+
+.team-card {
+    margin: 0 auto;
+    border: 1px solid;
+    height: 36em;
+    width: 24em;
+    padding: 4% 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+    height: 260px;
+    width: auto;
+}
+
+.card-content {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    padding: 10px;
+    height: 350px;
+    width: 300px; 
+    text-align: center;
+}
+
+.card-content h2 {
+    color: var(--header-navy-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: var(--header-navy-color);
+} 
+
+.card-content a {
+    color: inherit;
+}
+
+.card-content i {
+    font-size: 1.5rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+@media (max-width: 600px) {
+    .meet-us {
+        height: auto;
+        padding: 20px 10px; 
+    }
+
+    .container-meet-us {
+        padding: 10% 5%; 
+    }
+
+    .container-meet-us h1 {
+        margin-top: 0.5em;
+        font-size: 2.5rem;
+        text-align: center; 
+    }
+
+    .team-cards {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .team-card {
+        padding: 0;
+        border-radius: 0;
+        width: 90%;
+        height: auto; 
+    }
+
+    .team-card img {
+        padding-top: 4%;
+    }
+
+    .card-content {
+        height: auto;
+        width: 100%;
+        padding: 16px
+    }
+
+    .card-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-content p {
+        font-size: 1rem;
+    }
+
+    .card-content i {
+        font-size: 1.25rem;
+    }
 }
