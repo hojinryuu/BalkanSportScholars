@@ -123,8 +123,69 @@
     </section>
 
     <section class="uni-life">
-        <h1>Life as a Student-Athlete</h1>
+
+        <div class="container-uni-life">
+            <h1>University Life</h1>  
+            <div class="uni-media">
+                <div class="feature-img">
+                    <img src="img/uni-life-feature.jpg" alt="University Life Feature Image">
+                    <i class="fas fa-play" onclick="playVideo('img/daily.mp4')"></i>
+                </div>
+
+                <div class="uni-col">
+
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="img/vlog-thumbnail.jpg" alt="University Life Feature Image">
+                            <i class="fas fa-play" onclick="playVideo('img/vlog.mp4')"></i>
+                        </div>
+                        <p>A day in a life of College Soccer player<br>NCAA Quarterfinal</p>
+                    </div>
+
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="img/njit-thumbnail.jpg" alt="University Life Feature Image">
+                            <i class="fas fa-play" onclick="playVideo('img/NJIT.mp4')"></i>
+                        </div>
+                        <p>Check out how the NJIT men's soccer team bonded over a fun round of soccer golf</p>
+                    </div>
+
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="img/pier5-thumbnail.jpg" alt="University Life Feature Image">
+                            <i class="fas fa-play" onclick="playVideo('img/pier5.mp4')"></i>
+                        </div>
+                        <p>A view from the Pier 5 football field</p>
+                    </div>
+
+                </div>  
+            </div>          
+        </div>
+
+        <div class="video-player" id="videoPlayer">
+            <video controls id="myVideo">
+                <source src="img/daily.mp4" type="video/mp4">
+            </video>
+            <i class="fas fa-times close-btn" onclick="stopVideo()"></i>
+        </div>
+
     </section>
-  
+
+    <script>
+        var videoPlayer = document.getElementById("videoPlayer");
+        var myVideo = document.getElementById("myVideo");
+
+        function stopVideo() {
+            myVideo.muted = true; 
+            videoPlayer.style.display = "none";
+        }
+
+        function playVideo(file){
+            myVideo.src = file;
+            myVideo.muted = false;
+            videoPlayer.style.display = "block";
+        }
+    </script>
+
 </body>
 </html>
