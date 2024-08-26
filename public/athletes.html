@@ -42,35 +42,41 @@
             <div class="player-cards">
                 <div class="player-card">
                     <img src="img/player1.jpeg" alt="Xhoel Lutaj"> 
+                    <div class="player-details">
+                        <h3>Xhoel Lutaj</h3>
+                        <p>Position: Midfield</p>
+                        <p>Age: 18</p>
+                        <p>Place of birth: Fier, Albania</p>
+                    </div>
                 </div>
                 <div class="player-card">
                     <img src="img/player2.jpeg" alt="Ermal Ahmetaj"> 
+                    <div class="player-details">
+                        <h3>Ermal Ahmetaj</h3>
+                        <p>Position: Goalkeeper</p>
+                        <p>Age: 19</p>
+                        <p>Place of birth: Tiranë, Albania</p>
+                        <a href="https://www.instagram.com/ermal.ahmetaj/">
+                            <i id="social-icon" class="fab fa-instagram"></i>
+                        </a>        
+                    </div>
                 </div>
                 <div class="player-card">
                     <img src="img/player3.jpeg" alt="Franc Rabeta"> 
+                    <div class="player-details">
+                        <h3>Franc Rabeta</h3>
+                        <p>Position: Attack</p>
+                        <p>Age: 19</p>
+                        <p>Place of birth: Tiranë, Albania</p>
+                        <a href="https://www.instagram.com/francrabeta/">
+                            <i id="social-icon" class="fab fa-instagram"></i>
+                        </a>        
+                    </div>
                 </div>
+                
             </div>
         </div>
     </section>
-    
-    <script>
-
-        let scrollContainer = document.querySelector(".gallery");
-        let prevBtn = document.getElementById("backBtn");
-        let nextBtn = document.getElementById("nextBtn");
-
-        nextBtn.addEventListener("click", () => {
-            scrollContainer.style.scrollBehavior = "smooth";
-            scrollContainer.scrollLeft += 900;
-        });
-        // .gallery width is 900 px
-
-        prevBtn.addEventListener("click", () => {
-            scrollContainer.style.scrollBehavior = "smooth";
-            scrollContainer.scrollLeft -= 900;
-        });
-
-    </script>
     
 </body>
 </html>
