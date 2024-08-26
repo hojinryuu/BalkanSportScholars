@@ -35,50 +35,81 @@
         </div>
     </header>
 
-    <!-- players section -->
-    <section aria-label="newest players">
-        <div class="carousel" data-carousel>
-            <button class="carousel-button prev" data-carousel-button="prev">&#8592;</button>
-            <button class="carousel-button next" data-carousel-button="next">&#8594;</button>
-            <ul data-slides>
-                <li class="slide" data-active>
-                    <img src="img/player1.jpeg" alt="Xhoel Lutaj"> 
-                </li>
-                <li class="slide">
-                    <img src="img/player2.jpeg" alt="Ermal Ahmetaj"> 
-                </li>
-                <li class="slide">
-                    <img src="img/player3.jpeg" alt="Franc Rabeta"> 
-                </li>
-            </ul>
+
+    <!-- gallery section -->
+    <section class="gallery-section">
+        <div class="container-gallery">
+            <h1>Our Players</h1>
+            <div class="gallery-wrap">
+                <button class="carousel-button prev" id="backBtn">&#8592;</button>
+                <div class="gallery">
+                    <div class="gallery-image">
+                        <span><img src="img/player1.jpeg" alt="Xhoel Lutaj"></span>
+                        <span><img src="img/player2.jpeg" alt="Ermal Ahmetaj"></span>
+                        <span><img src="img/player3.jpeg" alt="Franc Rabeta"></span>
+                    </div>
+                </div>
+                <button class="carousel-button next" id="nextBtn">&#8594;</button>
+            </div>
         </div>
-    
     </section>
+
+   
     <script>
-        const buttons = document.querySelectorAll("[data-carousel-button]");
-        
-        buttons.forEach(button => {
-            button.addEventListener("click", () => {
-                const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-                const slides = button
-                    .closest("[data-carousel]")
-                    .querySelector("[data-slides]");
 
-                const activeSlide = slides.querySelector("[data-active]");
-                let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-                if (newIndex < 0) newIndex = slides.children.length - 1;
-                if (newIndex >= slides.children.length) newIndex = 0;
+        const gallery = document.querySelector(".gallery");
+        const nextBtn = document.getElementById("nextBtn");
+        const prevBtn = document.getElementById("backBtn");
 
-                slides.children[newIndex].setAttribute("data-active", "true");
-                activeSlide.removeAttribute("data-active");
-            });
+        let galleryItems = gallery.querySelectorAll('div');
+        let firstClone = galleryItems[0].cloneNode(true);
+        let lastClone = galleryItems[galleryItems.length - 1].cloneNode(true);
+
+        gallery.appendChild(firstClone);
+        gallery.prepend(lastClone);
+
+        const itemWidth = galleryItems[0].offsetWidth;
+        let scrollPos = itemWidth;
+
+        gallery.scrollLeft = scrollPos;
+
+        nextBtn.addEventListener("click", () => {
+            if (scrollPos >= gallery.scrollWidth - itemWidth * 2) {
+                scrollPos = itemWidth;
+                gallery.scrollLeft = scrollPos;
+            }
+            gallery.style.scrollBehavior = "smooth";
+            scrollPos += itemWidth;
+            gallery.scrollLeft = scrollPos;
+        });
+
+        prevBtn.addEventListener("click", () => {
+            if (scrollPos <= itemWidth) {
+                scrollPos = gallery.scrollWidth - itemWidth * 2;
+                gallery.scrollLeft = scrollPos;
+            }
+            gallery.style.scrollBehavior = "smooth";
+            scrollPos -= itemWidth;
+            gallery.scrollLeft = scrollPos;
+        });
+
+        // handles continuous looping 
+
+        gallery.addEventListener('scroll', () => {
+            if (gallery.scrollLeft >= gallery.scrollWidth - itemWidth) {
+                gallery.style.scrollBehavior = "auto";
+                gallery.scrollLeft = itemWidth;
+                scrollPos = itemWidth;
+            } else if (gallery.scrollLeft <= 0) {
+                gallery.style.scrollBehavior = "auto";
+                gallery.scrollLeft = gallery.scrollWidth - itemWidth * 2;
+                scrollPos = gallery.scrollWidth - itemWidth * 2;
+            }
         });
     </script>
 </body>
 </html>
 
-
-the css
 :root {
     --header-navy-color:#010137;
     --main-bg-grey:#cccccc;
@@ -87,53 +118,69 @@ the css
     --btn-hover-red:#A30303;
 }
 
-/* players section */
-.carousel {
-    width: 100vh;
-    height: 100vh;
-    position: relative;
-}
-
-.carousel > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-}
-
-.slide > img {
-    display: block;
+/* gallery section */
+.gallery-section {
+    height: auto;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    display: flex;
+    align-items: center;
+    background-color: white;
 }
 
-.slide[data-active] {
-    opacity: 1;
-    z-index: 1;
-    transition-delay: 0ms;
+.container-gallery {
+    padding: 5% 8%;
+    width: 100%;
+}
+
+.container-gallery h1 {
+    color: var(--header-navy-color);
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+.gallery-wrap {
+    border: 1px solid magenta;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+.gallery {    
+    border: 1px solid blue;
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery-image {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery-image img {
+    width: 100%;
+    filter: grayscale(100);
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel-button {
-    position: absolute;
-    z-index: 2;
     background: none;
     border: none;
     font-size: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
     border-radius: .25rem;
     padding: 0 .5rem;
+    margin: 0 0.25em;
     background-color: rgba(0, 0, 0, .1);
 }
 
@@ -147,10 +194,9 @@ the css
     outline: 1px solid black;
 }
 
-.carousel-button.prev {
-    left: 1rem;
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-.carousel-button.next {
-    right: 1rem;
-}

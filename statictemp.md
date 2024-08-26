@@ -36,23 +36,25 @@
     </header>
 
     <!-- gallery section -->
-    <section class="players">
-        <div class="players-wrapper">
-            <h1>Our Athletes</h1>
-            <div class="player-cards">
-                <div class="player-card">
-                    <img src="img/player1.jpeg" alt="Xhoel Lutaj"> 
-                </div>
-                <div class="player-card">
-                    <img src="img/player2.jpeg" alt="Ermal Ahmetaj"> 
-                </div>
-                <div class="player-card">
-                    <img src="img/player3.jpeg" alt="Franc Rabeta"> 
-                </div>
+    <div class="gallery-wrap">
+        <button class="carousel-button prev" id="backBtn">&#8592;</button>
+        
+        <div class="gallery">
+            <div>
+                <span><img src="img/player1.jpeg" alt="Xhoel Lutaj"></span>
+                <span><img src="img/player2.jpeg" alt="Ermal Ahmetaj"></span>
+                <span><img src="img/player3.jpeg" alt="Franc Rabeta"></span>
+            </div>
+            <div>
+                <span><img src="img/player1.jpeg" alt="Xhoel Lutaj"></span>
+                <span><img src="img/player2.jpeg" alt="Ermal Ahmetaj"></span>
+                <span><img src="img/player3.jpeg" alt="Franc Rabeta"></span>
             </div>
         </div>
-    </section>
-    
+
+        <button class="carousel-button next" id="nextBtn">&#8594;</button>
+    </div>
+
     <script>
 
         let scrollContainer = document.querySelector(".gallery");
@@ -61,16 +63,84 @@
 
         nextBtn.addEventListener("click", () => {
             scrollContainer.style.scrollBehavior = "smooth";
-            scrollContainer.scrollLeft += 900;
+            scrollContainer.scrollLeft += 300;
         });
         // .gallery width is 900 px
 
         prevBtn.addEventListener("click", () => {
             scrollContainer.style.scrollBehavior = "smooth";
-            scrollContainer.scrollLeft -= 900;
+            scrollContainer.scrollLeft -= 300;
         });
 
     </script>
     
 </body>
 </html>
+
+:root {
+    --header-navy-color:#010137;
+    --main-bg-grey:#cccccc;
+    --main-bg-navy:#191a2b;
+    --main-bg-red:#C40404;
+    --btn-hover-red:#A30303;
+}
+
+/* gallery section */
+.gallery {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img {
+    width: 100%;
+    filter: grayscale(100);
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}

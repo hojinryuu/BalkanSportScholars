@@ -282,12 +282,19 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .player-card img {
     width: 100%;
     border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    transform-origin: center center;
+}
+
+.player-card img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 @media (max-width: 600px){
