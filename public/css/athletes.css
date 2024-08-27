@@ -6,6 +6,41 @@
     --btn-hover-red:#A30303;
 }
 
+.intro {
+    width: 100%;
+    height: 65vh;
+    background-image: url(../img/athletes-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container-intro {
+    display: flex;
+    align-items: center;
+}
+
+.begin-intro {
+    padding: 3% 8%;
+}
+
+.begin-intro h1 {
+    color:white;
+    line-height: 1.2em;
+    font-size: 4rem;
+}
+
+@media (max-width: 600px) {
+    .intro {
+        height: 300px;
+    }
+
+    .container-intro h1 {
+        font-size: 1.5em;
+        line-height: 1.75em;
+    }
+}
+
 /* players section */
 .players {
     width: 100%;
@@ -29,7 +64,6 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2em;
-    margin-top: 4.5em;
 }
 
 .player-card {
@@ -85,6 +119,81 @@
     }
 
     .player-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+}
+/* signing section */
+.signings {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-grey);
+}
+
+.signings-wrapper {
+    padding: 5% 8%;
+}
+
+.signings-wrapper h1 {
+    color: var(--header-navy-color);
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+.signing-cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+    margin-top: 4.5em;
+}
+
+.signing-card {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.signing-card img {
+    width: 100%;
+}
+
+.signings-wrapper a {
+    background-color: var(--main-bg-red);
+    display: block;
+    width: fit-content;
+    border: none;
+    border-radius: 0.5em;
+    margin-top: 1.25em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 600px){
+    .signings {
+        height: auto;
+    }
+
+    .signings-wrapper {
+        text-align: center;
+    }
+
+    .signings-wrapper h1 {
+        margin-top: 0.5em;
+        font-size: 2.5rem;
+    }
+
+    .signing-cards {
         grid-template-columns: 1fr;
         gap: 20px;
         margin-top: 30px;
