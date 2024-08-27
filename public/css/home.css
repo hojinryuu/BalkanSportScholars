@@ -437,6 +437,10 @@ input[type=submit]:hover {
     display: flex;
 }
 
+.social a {
+    color: black;
+}
+
 .social span {
     margin: 0 0.5em;
 }
