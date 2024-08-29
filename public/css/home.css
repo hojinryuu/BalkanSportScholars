@@ -66,7 +66,27 @@
     font-size: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+    .hero {
+        height: auto;
+    }
+
+    .hero-intro{
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-intro h1 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .hero-intro-side {
+        display:none;
+    }
+}
+
+@media (max-width: 768px) {
     .hero {
         height: auto;
     }
@@ -193,7 +213,7 @@
 
 .card {
     border: 2px solid black;
-    border-radius: 30px;
+    border-radius: 10px;
     height: 22em;
     width: 100%;
     padding: 3% 8%;

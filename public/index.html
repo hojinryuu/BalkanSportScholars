@@ -17,12 +17,13 @@
 </head>
 <body>
     <!-- navbar -->
-    <header>
+   <header>
         <div class="navbar container-nav">
             <div class="navbar-logo">
                 <img src="img/logo.png" alt="BalkanSportsScholars logo">
                 <h1>BalkanSportScholars</h1>
             </div>
+    
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -32,6 +33,12 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 
@@ -203,5 +210,14 @@
             <a href="privacy.html">Privacy Policy</a>
         </div>
     </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
+    
 </body>
 </html>
