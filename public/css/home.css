@@ -243,7 +243,6 @@
 }
 
 .service-wrapper h1 {
-    padding-top: 0.75em;
     color: #fff;
     font-size: 4rem;
     text-transform: capitalize;
@@ -669,8 +668,10 @@ footer {
 }
 
 .footer-logo {
+    border: 1px solid magenta;
     align-self: center;
     height: fit-content;
+    padding: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
