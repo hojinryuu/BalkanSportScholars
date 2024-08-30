@@ -157,14 +157,14 @@
 .about-text p {
     color: var(--header-navy-color);
     font-size: 1.25rem;
-    line-height: 1.5rem;
+    line-height: 1.5;
     margin-top: 0.75em;
 }
 
 .about img {
     height: 400px;
+    width: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid magenta;
     margin-left: 8%;
 }
 
@@ -179,7 +179,7 @@
 
     .about-text p {
         font-size: 0.75rem;
-        line-height: 1rem;
+        line-height: 1.2;
     }
 
     .container-about a {
@@ -668,7 +668,6 @@ footer {
 }
 
 .footer-logo {
-    border: 1px solid magenta;
     align-self: center;
     height: fit-content;
     padding: 2%;
