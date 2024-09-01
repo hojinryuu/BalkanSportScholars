@@ -27,8 +27,16 @@
 }
 
 @media (max-width: 1024px) {
-    
+    .video-background {
+        height: 60vh;
+        width: 100%;
+    }
+
+    .video-background video {
+        width: 100%;
+    }
 }
+
 
 /* service section */
 .service {
@@ -57,7 +65,7 @@
 }
 
 .card {
-    height: 24em;
+    height: auto;
     width: 100%;
     padding: 3% 8%;
     display: flex;
@@ -95,6 +103,25 @@
     width: 100%;
     margin: 12px 0;
 }
+
+@media (max-width: 1024px) {
+    .service {
+        height: auto;
+    }
+
+    .service-wrapper h1 {
+        font-size: 2.5rem;
+    }
+
+    .card i {
+        font-size: 4rem;
+    }
+
+    .card h2 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+} 
 
 @media screen and (max-width: 600px) {
     .service {
@@ -147,7 +174,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 4em;
+    gap: 4em;
+    border: 1px solid red;
 }
 
 .feature-img {
@@ -157,8 +186,8 @@
 .feature-img img {
     display: block;
     border-radius: 6px;
-    height: 400px;
-    width: auto;
+    width: 100%;
+    height: auto;
 }
 
 .container-uni-life i {
@@ -173,31 +202,35 @@
 }
 
 .uni-col {
-    width: 500px;
+    flex: 1 1 auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
+    gap: 2em;
 }
 
 .small-img-row {
     height: 7em;
+    width: 100%;
+    flex: 1 1 auto;
     display: flex;
     background: #efefef;
     align-items: center;
     border-radius: 6px;
     overflow: hidden;
-    width: 100%;
 } 
 
 .small-img-row p {
     width: 80%;
+    border: 1px solid magenta;
     padding: 8px;
     color: black;
 }
 
 .small-img {
+    flex: 1 1 auto;
     position: relative;
     width: 60%;
     height: 100%;
@@ -248,7 +281,27 @@ video:focus {
     cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 1024px) {
+    .container-uni-life h1 {
+        font-size: 2.5rem;
+    }
+
+    .small-img-row p {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+
+    .small-img-row {
+        height: 5em;
+    }
+
+    .small-img {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 768px)  {
     .uni-life {
         height: auto;
     }
@@ -265,6 +318,7 @@ video:focus {
 
     .uni-media {
         flex-direction: column;
+        gap: 0;
     }
 
     .uni-col {
