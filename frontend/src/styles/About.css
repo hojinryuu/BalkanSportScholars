@@ -1,0 +1,380 @@
+:root {
+    --header-navy-color:#010137;
+    --main-bg-grey:#cccccc;
+    --main-bg-navy:#191a2b;
+    --main-bg-red:#C40404;
+}
+
+.about-intro {
+    height: 60vh;
+    width: 100%;
+    background-image: url(../assets/img/field.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.about-begin-intro {
+    padding: 5% 8%;
+}
+
+.about-begin-intro h1 {
+    color:white;
+    line-height: 1.2;
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+@media (max-width: 1024px) {
+    .about-begin-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-intro {
+        height: 35vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-begin-intro {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-begin-intro h1 {
+        font-size: 2.5rem; 
+        line-height: 1.4;
+    }
+
+    .about-intro {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .about-begin-intro h1 {
+        line-height: 1.1; 
+    }
+
+    .about-intro {
+        height: 30vh;
+    }
+}
+
+/* mission section */
+.mission {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-grey);
+}
+
+.container-mission {
+    margin-left: 8%;
+}
+
+.mission-text h1 {
+    color: var(--header-navy-color);
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.mission-text p {
+    color: var(--header-navy-color);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 1.5em;
+}
+
+.mission img {
+    height: 30em;
+    width: auto;
+    align-self: flex-end;
+    padding: 2em;
+    padding-bottom: 0;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .mission {
+        height: auto;
+    }
+
+    .mission-text h1{
+        margin-top: 0.5em;
+        font-size: 2.5rem;
+    }
+
+    .mission-text p {
+        font-size: 0.75rem; 
+        line-height: 1.2;
+    }
+
+    .mission img {
+        height: 20em;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-mission {
+        margin: 0 auto;
+        padding: 5% 8%;
+    }
+
+    .mission-text h1{
+        margin-top: 0.5em;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .mission-text p {
+        font-size: 1rem;
+    }
+    
+    .mission img {
+        height: 25em;
+    }
+}
+
+@media (max-width: 425px) {
+    .mission img {
+        height: 22em;
+    }
+}
+
+/* why-us section */
+.why-us {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-navy);
+}
+
+.container-why{
+    padding: 5% 8%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-why h1 {
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.why-text {
+    width: 50%;
+}
+
+.why-text p {
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 1.5em;
+}
+
+.why-us img {
+    height: 20em;
+    width: auto;
+}
+
+@media (max-width: 1024px) {
+    .why-us {
+        height: auto;
+    }
+
+    .container-why h1 {
+        font-size: 2.5rem;
+    }
+
+    .why-text p {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+
+    .why-us img {
+        height: 14em;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-us {
+        text-align: center;
+    }
+    .container-why {
+        flex-direction: column;
+    }
+
+    .why-text {
+        padding: 5% 8%;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .container-why h1{
+        font-size: 2.5rem;
+    }
+
+    .why-text p {
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+
+    .why-us img {
+        height: 15em;
+    }
+}
+
+/* meet-us section */
+.meet-us {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-grey);
+}
+
+.container-meet-us{
+    padding: 5% 8%;
+    width: 100%;
+}
+
+.container-meet-us h1 {
+    color: var(--header-navy-color);
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.team-cards {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+    margin-top: 4em;
+}
+
+.team-card {
+    border: 1px solid;
+    height: 40em;
+    width: 28em;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+    height: auto;
+    width: 80%;
+}
+
+.card-content {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5%;
+    height: 15em; 
+    width: 90%;
+    text-align: center;
+}
+
+.card-content h2 {
+    color: var(--header-navy-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: var(--header-navy-color);
+} 
+
+.card-content a {
+    color: inherit;
+}
+
+.card-content i {
+    font-size: 1.5rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+@media (max-width: 1024px) {
+    .meet-us {
+        height: auto;
+    }
+
+    .container-meet-us h1 {
+        font-size: 2.5rem;
+    }
+
+    .team-cards {
+        gap: 3em;
+    }
+
+    .team-card {
+        height: 32em;
+        width: 20em;
+    }
+
+    .card-content {
+        height: 12em; 
+    }
+
+    .card-content h2 {
+        font-size: 1rem;
+    }
+
+    .card-content p {
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+
+    .card-content i {
+        font-size: 1.25rem;
+    }
+}  
+
+@media (max-width: 768px) {
+    .container-meet-us h1 {
+        margin-top: 0.5em;
+        font-size: 2.5rem;
+        text-align: center; 
+    }
+
+    .team-cards {
+        gap: 2em;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .team-cards {
+        margin-top: 2em;
+    }
+}
