@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0b0bb90f.css",
+    "main.js": "/static/js/main.31456441.js",
+    "static/media/vlog.mp4": "/static/media/vlog.31c08f43962e8c246407.mp4",
+    "static/media/njit.mp4": "/static/media/njit.69f3ba71b1e4fdf90c1a.mp4",
+    "static/media/daily.mp4": "/static/media/daily.f851346f97077879026e.mp4",
+    "static/media/services.mp4": "/static/media/services.d30646998b9c02f7f0cb.mp4",
+    "static/media/pier5.mp4": "/static/media/pier5.1c4b125b5cfd4ded9410.mp4",
+    "static/media/mission-img.png": "/static/media/mission-img.ff517afeecb1c3248abc.png",
+    "static/media/logo.png": "/static/media/logo.c9d3d87d95f8d587013c.png",
+    "static/media/signing1.jpg": "/static/media/signing1.8f4b96cc418f953565a1.jpg",
+    "static/media/uni-life-feature.jpg": "/static/media/uni-life-feature.ff369218a0e7e57cd777.jpg",
+    "static/media/about.jpg": "/static/media/about.2397a6b38c754bf9416e.jpg",
+    "static/media/athletes-bg.jpg": "/static/media/athletes-bg.a3abca87243762b850d2.jpg",
+    "static/media/BG.jpg": "/static/media/BG.33f8e8c675cbc075a88e.jpg",
+    "static/media/field.jpg": "/static/media/field.8e3af32bc31f617f4715.jpg",
+    "static/media/endi_rahmani.jpg": "/static/media/endi_rahmani.f85a0944db626cb816ae.jpg",
+    "static/media/why-us.jpg": "/static/media/why-us.63a2fc9c87817c9b1694.jpg",
+    "static/media/player2.jpeg": "/static/media/player2.2a13c3b31628a6e494da.jpeg",
+    "static/media/player3.jpeg": "/static/media/player3.047a7f7cb2053860c24b.jpeg",
+    "static/media/player1.jpeg": "/static/media/player1.8f6e637af7cb5199106b.jpeg",
+    "static/media/sokol_ymeraj.jpg": "/static/media/sokol_ymeraj.a823fa003766495da971.jpg",
+    "static/media/pier5-thumbnail.jpg": "/static/media/pier5-thumbnail.e187040ba6ab3e26c002.jpg",
+    "static/media/signing2.jpg": "/static/media/signing2.853924a5dd33abf0d25f.jpg",
+    "static/media/vlog-thumbnail.jpg": "/static/media/vlog-thumbnail.7bb2d8ee7db5084e18e0.jpg",
+    "static/media/njit-thumbnail.jpg": "/static/media/njit-thumbnail.9abe9443e25454d1e2c4.jpg",
+    "index.html": "/index.html",
+    "main.0b0bb90f.css.map": "/static/css/main.0b0bb90f.css.map",
+    "main.31456441.js.map": "/static/js/main.31456441.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b0bb90f.css",
+    "static/js/main.31456441.js"
+  ]
+}
