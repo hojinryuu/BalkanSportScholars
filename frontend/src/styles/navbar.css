@@ -1,6 +1,9 @@
 header {
     padding: 1em 0;
-    background-color:#191a2b;
+    background-color: #191a2b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar {
@@ -41,7 +44,7 @@ nav li {
     margin-left: 1.5rem;
 }
 
-nav a{
+nav a {
     padding: .25em 0;
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -49,25 +52,61 @@ nav a{
     font-weight: 500;
 }
 
-@media (max-width: 600px){
-    .container-nav {
-        flex-direction: column;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 1024px) {
+    .navbar-logo h1{
+        font-size: 1.25rem;
     }
 
-    header {
-        text-align: center;
+    .navbar-logo img {
+        height: 4.5em;
     }
-
     nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
         flex-direction: column;
+        align-items: center;
+        background-color: #191a2b; 
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.4s ease-in-out; 
+    }
+
+    nav ul.active {
+        max-height: 500px;
     }
 
     nav li {
-        margin: .5em 0;
+        margin: 1rem 0;
     }
 
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 425px) {
     .navbar-logo h1 {
         font-size: 1rem;
         margin-left: 0.5em;
+    }
+    
+    .navbar-logo img {
+        height: 3em;
+        padding: 0;
     }
 }
