@@ -10,7 +10,6 @@ Balkan Sport Scholars is a full-stack web application designed to assist athlete
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
