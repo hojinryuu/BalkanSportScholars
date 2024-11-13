@@ -15,9 +15,9 @@ Balkan Sport Scholars is a full-stack web application designed to assist athlete
 ## Features
 
 - **Athlete Profiles**: Showcase the profiles of recruited athletes.
-- **Scholarship Services**: Guide athletes through the process of applying for scholarships in the U.S.
-- **Responsive Design**: Fully responsive design ensuring optimal performance on all devices.
-- **Contact Form**: A contact form for athletes to get in touch with the team.
+- **Scholarship Services**: Guide athletes through applying for scholarships in the U.S.
+- **Responsive Design**: Fully responsive design ensures optimal device performance.
+- **Contact Form**: A contact form for athletes to contact the team.
 
 ## Tech Stack
 
@@ -77,7 +77,7 @@ The backend server will start on http://localhost:3000 by default.
 cd frontend
 npm start
 ```
-The frontend will start on http://localhost:3001 by default.
+The front end will start on http://localhost:3001 by default.
 
 ## Building for Production
 To build the frontend for production:
@@ -95,12 +95,12 @@ This will generate a build folder in the frontend directory with optimized asset
 
 ## Fork the Project
 Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
+Commit your changes (git commit -m 'Add some AmazingFeature')
 Push to the Branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
 ## Contact
 Name: Hojin Ryu  
 Email: hojinryu0411@gmail.com  
-LinkedIn: Your LinkedIn  
+LinkedIn: https://www.linkedin.com/in/hojinryu
 Project Link: https://github.com/hojinryuu/BalkanSportScholars  
